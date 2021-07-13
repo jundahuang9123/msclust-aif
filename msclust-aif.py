@@ -45,7 +45,10 @@ def peaks_parse(csv):
     return peaks_dict
 
 def sim_mic_parse(csv):
-    return
+    """
+    """
+    sim_mic_dict = {}
+    return sim_mic_dict
 
 def masspattern_match(list1, list2, threshold):
     """

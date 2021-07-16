@@ -36,9 +36,10 @@ def peaks_parse(csv):
             elif i == 0:
                 file_header = ['peak-aif'] + items[0:]
             elif file_header[0] == 'peak-aif':
+                items.insert(0, str(i))
                 peaks_dict[items[0]] = {}
                 for j in range(len(items)):
-                    peaks_dict[items[0]][file_header[j + 1]] = items[j]
+                    peaks_dict[items[0]][file_header[j]] = items[j]
             else:
                 peaks_dict[items[0]] = {}
                 for j in range(len(items)):
@@ -82,7 +83,7 @@ def masspattern_match(list1, list2, threshold):
     else: 
         match = True
         correlation, p = pearsonr(list1, list2)
-        if correlation <= threshold and correlation >= -threshold:
+        if correlation <= threshold and correlation != 'nan' : #and correlation >= -threshold:
             match = False
     return match, correlation
 

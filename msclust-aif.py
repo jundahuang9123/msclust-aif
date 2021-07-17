@@ -5,7 +5,8 @@ Author: Junda Huang
 Command line input: python3 msclust-aif.py fullscanmsclust.csv 
                     aifmsclustready.csv fullscansim.csv fullscanmic.csv
                     [aifmsclust.csv] retention_time_tolerance 
-                    correlation_threshold
+                    correlation_threshold Correlation_threshold_confidence
+                    output
 
 """
 
@@ -13,6 +14,7 @@ Command line input: python3 msclust-aif.py fullscanmsclust.csv
 import csv
 from sys import argv
 from statistics import stdev, mean
+from numpy.lib.type_check import nan_to_num
 from scipy.stats import pearsonr
 
 # functions
@@ -64,7 +66,7 @@ def sim_mic_parse(csv):
                     prec_dict[items[0]][header[j]] = items[j]
     return prec_dict
 
-def masspattern_match(list1, list2, threshold):
+def masspattern_match(list1, list2, threshold, threshold_confidence):
     """
     Match expression pattern with metabolites pattern
 
@@ -83,7 +85,8 @@ def masspattern_match(list1, list2, threshold):
     else: 
         match = True
         correlation, p = pearsonr(list1, list2)
-        if correlation <= threshold and correlation != 'nan' : #and correlation >= -threshold:
+        correlation = nan_to_num(correlation)
+        if correlation <= threshold or p >= threshold_confidence:
             match = False
     return match, correlation
 
@@ -96,8 +99,8 @@ def retention_control(ret1, ret2, retention_time_tolerance):
         control = False
     return control
 
-def aif_cluster(peaks_dict, sample_list, prec_dict, \
-    retention_time_tolerance, correlation_threshold):
+def aif_cluster(peaks_dict, sample_list, prec_dict, retention_time_tolerance,\
+    correlation_threshold, correlation_threshold_confidence):
     """
     """
     for frag, frag_info in peaks_dict.items():
@@ -113,7 +116,8 @@ def aif_cluster(peaks_dict, sample_list, prec_dict, \
                     list1.append(float(prec_info[sample]))
                     list2.append(float(frag_info[sample]))
                     match, correlation = masspattern_match\
-                        (list1, list2, correlation_threshold)
+                        (list1, list2, correlation_threshold, \
+                            correlation_threshold_confidence)
                     if match:
                         frag_info['clusterId1'] = prec_info['clusterId']
                         frag_info['membership1'] = abs(correlation)
@@ -158,13 +162,14 @@ if __name__ == '__main__':
     aif, sample_list, header = peaks_parse(argv[2])
     mic = sim_mic_parse(argv[4])
     #sim = sim_mic_parse(argv[3])
-    retention_time_tolerance = int(argv[-3])
-    correlation_threshold = float(argv[-2])
+    retention_time_tolerance = int(argv[-4])
+    correlation_threshold = float(argv[-3])
+    correlation_threshold_confidence = float(argv[-2])
     out = argv[-1]
 
 # 2. cluster aif peaks to fullcan clusters
-    out_dict = aif_cluster(aif, sample_list, mic, \
-        retention_time_tolerance, correlation_threshold)
+    out_dict = aif_cluster(aif, sample_list, mic, retention_time_tolerance, \
+        correlation_threshold, correlation_threshold_confidence)
 
 # 3: print output in csv
     aif_cluster_csv = output_write(out_dict, header, out)

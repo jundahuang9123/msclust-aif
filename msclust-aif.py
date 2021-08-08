@@ -154,6 +154,8 @@ def output_write(dict, header, out):
             writer.writerow(rowdict)
     return file
 
+def main():
+    return
 # main
 if __name__ == '__main__':
 

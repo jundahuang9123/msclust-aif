@@ -77,13 +77,16 @@ def masspattern_match(list1, list2, threshold, threshold_confidence):
     output:
         match(boolean): if the two lists' pattern match
     """
+    match = True
     if len(list1) != len(list2):
         raise ValueError\
             ("precursor/fragment sample sizes do not match")
     elif threshold > 1 or threshold < 0:
         raise ValueError ("threshold has to be postive number < 1")
+    elif len(list1) < 2:
+        return match == False
     else: 
-        match = True
+        print(list1, list2)
         correlation, p = pearsonr(list1, list2)
         correlation = nan_to_num(correlation)
         if correlation <= threshold or p >= threshold_confidence:

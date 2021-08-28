@@ -84,9 +84,11 @@ def masspattern_match(list1, list2, threshold, threshold_confidence):
     elif threshold > 1 or threshold < 0:
         raise ValueError ("threshold has to be postive number < 1")
     elif len(list1) < 2:
-        return match == False
+        match = False 
+        correlation = 0
+        return match, correlation
     else: 
-        print(list1, list2)
+        #print(list1, list2)
         correlation, p = pearsonr(list1, list2)
         correlation = nan_to_num(correlation)
         if correlation <= threshold or p >= threshold_confidence:
@@ -109,6 +111,7 @@ def aif_cluster(peaks_dict, sample_list, prec_dict, retention_time_tolerance,\
     for frag, frag_info in peaks_dict.items():
         frag_info['clusterId1'] = ''
         frag_info['membership1'] = ''
+    precfinal = []
     for prec, prec_info in prec_dict.items():
         for frag, frag_info in peaks_dict.items():
             list1 = [] 
@@ -118,11 +121,13 @@ def aif_cluster(peaks_dict, sample_list, prec_dict, retention_time_tolerance,\
                 for sample in sample_list:
                     list1.append(float(prec_info[sample]))
                     list2.append(float(frag_info[sample]))
+                    #print(list1, list2)
                     match, correlation = masspattern_match\
                         (list1, list2, correlation_threshold, \
                             correlation_threshold_confidence)
                     if match:
-                        frag_info['clusterId1'] = prec_info['clusterId']
+                        precfinal.append(prec)
+                        frag_info['clusterId1'] = prec_info['clusterId1']
                         frag_info['membership1'] = abs(correlation)
                         #print(frag_info['clusterId1'], \
                         #    frag_info['membership1'])
@@ -136,6 +141,10 @@ def aif_cluster(peaks_dict, sample_list, prec_dict, retention_time_tolerance,\
                         continue
             else:
                 continue
+            precfinal = list(set(precfinal))
+    for prec in precfinal:
+        prec_new = 'Pre' + str(prec_dict[prec]['clusterId1'])
+        peaks_dict[prec_new] = prec_dict[prec]
     return peaks_dict
 
 def output_write(dict, header, out):
@@ -165,15 +174,15 @@ if __name__ == '__main__':
 # 1. parse files
     #fullscan, sample_list, header = peaks_parse(argv[1])
     aif, sample_list, header = peaks_parse(argv[2])
-    mic = sim_mic_parse(argv[4])
-    #sim = sim_mic_parse(argv[3])
+    #mic = sim_mic_parse(argv[4])
+    sim = sim_mic_parse(argv[3])
     retention_time_tolerance = int(argv[-4])
     correlation_threshold = float(argv[-3])
     correlation_threshold_confidence = float(argv[-2])
     out = argv[-1]
 
 # 2. cluster aif peaks to fullcan clusters
-    out_dict = aif_cluster(aif, sample_list, mic, retention_time_tolerance, \
+    out_dict = aif_cluster(aif, sample_list, sim, retention_time_tolerance, \
         correlation_threshold, correlation_threshold_confidence)
 
 # 3: print output in csv

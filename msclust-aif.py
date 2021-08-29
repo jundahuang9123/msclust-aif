@@ -78,6 +78,18 @@ def masspattern_match(list1, list2, threshold, threshold_confidence):
         match(boolean): if the two lists' pattern match
     """
     match = True
+    #poplist = []
+    #for i in range(len(list2)):
+    #    if list2[i] == 0:
+    #        continue
+    #    elif list2[i].is_integer():
+    #        continue
+    #    else:
+    #        poplist.append(i)
+    #if len(poplist) >= 2:
+    #    print(poplist)
+    #for n in poplist:
+    #    list2[n] = 0
     if len(list1) != len(list2):
         raise ValueError\
             ("precursor/fragment sample sizes do not match")
@@ -88,10 +100,10 @@ def masspattern_match(list1, list2, threshold, threshold_confidence):
         correlation = 0
         return match, correlation
     else: 
-        #print(list1, list2)
         correlation, p = pearsonr(list1, list2)
-        correlation = nan_to_num(correlation)
-        if correlation <= threshold or p >= threshold_confidence:
+        if str(correlation) == 'nan':
+            correlation = nan_to_num(correlation)
+        if correlation <= threshold or p > threshold_confidence:
             match = False
     return match, correlation
 
@@ -121,24 +133,23 @@ def aif_cluster(peaks_dict, sample_list, prec_dict, retention_time_tolerance,\
                 for sample in sample_list:
                     list1.append(float(prec_info[sample]))
                     list2.append(float(frag_info[sample]))
-                    #print(list1, list2)
-                    match, correlation = masspattern_match\
-                        (list1, list2, correlation_threshold, \
-                            correlation_threshold_confidence)
-                    if match:
-                        precfinal.append(prec)
-                        frag_info['clusterId1'] = prec_info['clusterId1']
-                        frag_info['membership1'] = abs(correlation)
-                        #print(frag_info['clusterId1'], \
-                        #    frag_info['membership1'])
-                    else: 
+                match, correlation = masspattern_match\
+                    (list1, list2, correlation_threshold, \
+                        correlation_threshold_confidence)
+                if match:
+                    precfinal.append(prec)
+                    frag_info['clusterId1'] = prec_info['clusterId1']
+                    frag_info['membership1'] = abs(correlation)
+                    #print(frag_info['clusterId1'], \
+                    #    frag_info['membership1'])
+                else: 
                     #elif match and frag_info['cluster1'] != '':
                     #    frag_info['clusterId2'] = prec_info['clusterId']
                     #    frag_info['membership2'] = correlation
                     #elif match and frag_info['cluster2'] != '':
                     #    frag_info['clusterId3'] = prec_info['clusterId']
                     #    frag_info['membership3'] = correlation
-                        continue
+                    continue
             else:
                 continue
             precfinal = list(set(precfinal))

@@ -36,11 +36,13 @@ def aifcluster_read(file):
             items = line.strip('\n').split(',')
             if i == 0:
                 headers_list = items[1:4] + [items[31]]
-                print(headers_list)
+                #print(headers_list)
             elif 'Pre' in items[0]:
                 aif_dict[items[0]] = {}
                 aif_dict[items[0]]['params'] = {headers_list[0] : items[1],\
-                headers_list[1] : items[2], headers_list[2] : items[3], \
+                headers_list[2] : \
+                    "{:.2f}".format(float(items[3])/100000), \
+                        headers_list[1] : items[2], \
                 headers_list[3] : items[31]}
             else:
                 mass_dict[items[0]] = items[1:]
@@ -56,7 +58,8 @@ def aifcluster_read(file):
         mgf_dict['intensity array'] = []
         for mass in peaks:
             if 'params' not in mass:
-                mgf_dict['m/z array'].append(peaks[mass][2])
+                mgf_dict['m/z array'].\
+                    append("{:.2f}".format(float(peaks[mass][2])/100000))
                 masslist = peaks[mass][4:]
                 mgf_dict['intensity array'].append(max(masslist)) 
         aif_dict_list.append(mgf_dict)
@@ -103,5 +106,5 @@ def main(file, ref):
 if __name__ == '__main__':
     # matches = main(argv[1], argv[2])
     aifdictlist, h_list = aifcluster_read(argv[1])
-    mgf_file = mgf_write(aifdictlist, 'msclust-aif/mgfout/test.mgf', h_list)
-    match_ms_score('msclust-aif/mgfout/test.mgf', argv[2], argv[3])
+    mgf_file = mgf_write(aifdictlist, 'out.mgf', h_list)
+    match_ms_score('out.mgf', argv[2], argv[3])

@@ -86,8 +86,8 @@ def match_ms_score(mgf_file, references_file_mgf, output):
         for match in matches:
             (reference, query, match) = match
             if reference is not query and match["matches"] >= 1:
-                out.write(f"Reference scan id: {reference.metadata['scans']}")
-                out.write(f"Query scan id: {query.metadata['scans']}")
+                #out.write(f"Reference scan id: {reference.metadata['scans']}")
+                #out.write(f"Query scan id: {query.metadata['scans']}")
                 out.write(f"Score: {match['score']:.4f}")
                 out.write(f"Number of matching peaks: {match['matches']}")
                 out.write("----------------------------")
@@ -106,5 +106,5 @@ def main(file, ref):
 if __name__ == '__main__':
     # matches = main(argv[1], argv[2])
     aifdictlist, h_list = aifcluster_read(argv[1])
-    mgf_file = mgf_write(aifdictlist, 'out.mgf', h_list)
-    match_ms_score('out.mgf', argv[2], argv[3])
+    mgf_file = mgf_write(aifdictlist, 'test2.mgf', h_list)
+    match_ms_score('test2.mgf', argv[2], argv[3])

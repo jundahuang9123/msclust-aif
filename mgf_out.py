@@ -2,8 +2,12 @@
 """
 Author: Junda Huang
 
+Script to rewrite AIF clustering output into MGF spectra file type.
+Then use matchms functions to get matching scores for the aif clustered 
+spectra
 
-Command line input: python3 <aifcluster>.csv 
+Command line input: python3 <aifcluster>.csv <output>.mgf 
+                    <references library>.msp/mgf output.txt
 """
 
 from sys import argv
@@ -22,11 +26,12 @@ def mgf_test(mgf):
 def aifcluster_read(file):
     """
     Read aifcluster information from csv file write into dictionary
-    Param:
+    Params:
         file(string): file name of the csv file containing aifcluster info
-    output:
+    Returns:
         aif_dict(dict): dictionary containing aifcluster information
                         {'Precursor ion': {'info' : [infos]}; {'fragment':}}
+        headers_list(list): 
     """
     aif_dict = {}
     mass_dict = {}
@@ -66,10 +71,24 @@ def aifcluster_read(file):
     return aif_dict_list, headers_list
 
 def mgf_write(dict, out, k_order):
+    """
+    write AIF clusters spectra into mgf files
+    Params:
+        aif_dict(dict): dictionary containing aifcluster information
+                        {'Precursor ion': {'info' : [infos]}; {'fragment':}}
+        k_order(list):
+    Returns:
+        mgf_file()
+    """
     mgf_file = mgf.write(dict, output = out, key_order = k_order)
     return mgf_file
 
 def match_ms_score(mgf_file, references_file_mgf, output):
+    """
+    Find spectra matches from references library, calculate matches scores
+    Params:
+    Returns:
+    """
     queries = load_from_mgf(mgf_file)
     references = load_from_msp(references_file_mgf)
     q_spectra = []
@@ -96,15 +115,24 @@ def match_ms_score(mgf_file, references_file_mgf, output):
 def spectra_loading():
     return
 
-def main(file, ref):
-    mgf_dict = aifcluster_read(file)
-    mgf_file = mgf_write(mgf_dict)
-    matches = match_ms_score(mgf_file, ref)
+def main(file, outmgf, ref, txt_out):
+    """
+    Main function
+    Params:
+    Returns:
+    """
+    mgf_dict, h_list = aifcluster_read(file)
+    mgf_file = mgf_write(mgf_dict, outmgf, h_list)
+    match_ms_score(outmgf, ref, txt_out)
     return
     
 # main
 if __name__ == '__main__':
-    # matches = main(argv[1], argv[2])
-    aifdictlist, h_list = aifcluster_read(argv[1])
-    mgf_file = mgf_write(aifdictlist, 'test2.mgf', h_list)
-    match_ms_score('test2.mgf', argv[2], argv[3])
+    # parsing files from command line
+    aifcluster_csv = argv[1]
+    mgfoutfile = argv[2]
+    ref_lib = argv[3]
+    output_txt = argv[4]
+
+    # main
+    main(aifcluster_csv, mgfoutfile, ref_lib, output_txt)

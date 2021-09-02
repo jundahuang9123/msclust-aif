@@ -46,7 +46,7 @@ def aifcluster_read(file):
                 aif_dict[items[0]] = {}
                 aif_dict[items[0]]['params'] = {headers_list[0] : items[1],\
                 headers_list[2] : \
-                    "{:.2f}".format(float(items[3])/1000000), \
+                    "{:.4f}".format(float(items[3])/1000000), \
                         headers_list[1] : items[2], \
                 headers_list[3] : items[31]}
             else:
@@ -64,7 +64,7 @@ def aifcluster_read(file):
         for mass in peaks:
             if 'params' not in mass:
                 mgf_dict['m/z array'].\
-                    append("{:.2f}".format(float(peaks[mass][2])/1000000))
+                    append("{:.4f}".format(float(peaks[mass][2])/1000000))
                 masslist = peaks[mass][4:]
                 mgf_dict['intensity array'].append(max(masslist)) 
         aif_dict_list.append(mgf_dict)

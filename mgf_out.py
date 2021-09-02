@@ -19,9 +19,9 @@ from matchms import calculate_scores
 from matchms.similarity import CosineGreedy
 from pyteomics import mgf
 
-def mgf_test(mgf):
-    file = load_from_mgf("msclust-aif/out.mgf")
-    print(file)
+#def mgf_test(mgf):
+#   file = load_from_mgf("msclust-aif/out.mgf")
+# # print(file)
 
 def aifcluster_read(file):
     """
@@ -41,7 +41,6 @@ def aifcluster_read(file):
             items = line.strip('\n').split(',')
             if i == 0:
                 headers_list = items[1:4] + [items[31]]
-                #print(headers_list)
             elif 'Pre' in items[0]:
                 aif_dict[items[0]] = {}
                 aif_dict[items[0]]['params'] = {headers_list[0] : items[1],\
@@ -90,26 +89,40 @@ def match_ms_score(mgf_file, references_file_mgf, output):
     Returns:
     """
     queries = load_from_mgf(mgf_file)
+    #queries = load_from_msp('test.msp')
     references = load_from_msp(references_file_mgf)
-    q_spectra = []
-    ref_spectra = []
-    for q in queries:
-        for r in references:
-            q = normalize_intensities(default_filters(q))
-            r = normalize_intensities(default_filters(r))
-            q_spectra.append(q)
-            ref_spectra.append(r)
-    matches = calculate_scores(references = ref_spectra, queries = q_spectra,\
-     similarity_function = CosineGreedy())
     with open (output, 'w') as out:
-        for match in matches:
-            (reference, query, match) = match
-            if reference is not query and match["matches"] >= 1:
-                #out.write(f"Reference scan id: {reference.metadata['scans']}")
-                #out.write(f"Query scan id: {query.metadata['scans']}")
-                out.write(f"Score: {match['score']:.4f}")
-                out.write(f"Number of matching peaks: {match['matches']}")
-                out.write("----------------------------")
+        for q in queries: 
+            q = normalize_intensities(default_filters(q))
+            q_spectra = [q]
+            ref_spectra = []
+            for r in references:
+                tolerence = float(q.metadata['precursormz'])
+                if 'precursormz' in r.metadata.keys():
+                    target = r.metadata['precursormz']
+                    target = float(target.replace(',', '.'))
+                    if abs(target - tolerence) <= 0.5:
+                        r = normalize_intensities(default_filters(r))
+                        ref_spectra.append(r)
+            if ref_spectra == []:
+                continue
+            else:
+                print(ref_spectra, "asdad")
+                matches = calculate_scores(references = ref_spectra,\
+                    queries = q_spectra, similarity_function = CosineGreedy())
+                for match in matches:
+                    (reference, query, match) = match
+                    if reference is not query and match["matches"] >= 1:
+                        out.write(f"Reference precursormz:\
+                            {reference.metadata['precursormz']}\n")
+                        out.write(f"Query scan id:\
+                            {query.metadata['scan nr']}\n")
+                        out.write(f"Query mass:\
+                            {query.metadata['precursormz']}\n")
+                        out.write(f"Score: {match['score']:.4f}\n")
+                        out.write(f"Number of matching peaks:\
+                            {match['matches']}\n")
+                        out.write("----------------------------\n")
     return 
 
 def spectra_loading():

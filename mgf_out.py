@@ -90,39 +90,50 @@ def match_ms_score(mgf_file, references_file_mgf, output):
     """
     queries = load_from_mgf(mgf_file)
     #queries = load_from_msp('test.msp')
-    references = load_from_msp(references_file_mgf)
+    #queries = load_from_mgf('Qe05947-neg.mgf')
+    #references = load_from_msp(references_file_mgf)
     with open (output, 'w') as out:
         for q in queries: 
-            q = normalize_intensities(default_filters(q))
-            q_spectra = [q]
+            q_spectra = [normalize_intensities(default_filters(q))]
             ref_spectra = []
-            for r in references:
+            for r in load_from_msp(references_file_mgf):
                 tolerence = float(q.metadata['precursormz'])
+                #tolerence = float(q.metadata['pepmass'][0])
                 if 'precursormz' in r.metadata.keys():
-                    target = r.metadata['precursormz']
-                    target = float(target.replace(',', '.'))
+                    target = float(r.metadata['precursormz'].replace(',','.'))
                     if abs(target - tolerence) <= 0.5:
                         r = normalize_intensities(default_filters(r))
                         ref_spectra.append(r)
-            if ref_spectra == []:
-                continue
-            else:
-                print(ref_spectra, "asdad")
-                matches = calculate_scores(references = ref_spectra,\
-                    queries = q_spectra, similarity_function = CosineGreedy())
-                for match in matches:
+            if ref_spectra != []:
+                for match in calculate_scores(ref_spectra, q_spectra, \
+                    CosineGreedy()):
                     (reference, query, match) = match
-                    if reference is not query and match["matches"] >= 1:
+                    if reference is not query and match["matches"] >= 5:
                         out.write(f"Reference precursormz:\
                             {reference.metadata['precursormz']}\n")
+                    #print(f"Reference precursormz:\
+                    #    {reference.metadata['precursormz']}\n")
                         out.write(f"Query scan id:\
                             {query.metadata['scan nr']}\n")
+                        #print(query.metadata)
+                        #out.write(f"Query scan id:\
+                        #    {query.metadata['scans']}\n")
+                    #print(f"Query scan id:\
+                     #   {query.metadata['scans']}\n")
                         out.write(f"Query mass:\
                             {query.metadata['precursormz']}\n")
+                    #    out.write(f"Query mass:\
+                    #        {query.metadata['pepmass']}\n")    
                         out.write(f"Score: {match['score']:.4f}\n")
                         out.write(f"Number of matching peaks:\
                             {match['matches']}\n")
+                    #print(f"Query mass:\
+                    #    {query.metadata['pepmass']}\n")    
+                    #print(f"Score: {match['score']:.4f}\n")
+                    #print(f"Number of matching peaks:\
+                    #    {match['matches']}\n")
                         out.write("----------------------------\n")
+                    #print("----------------------------\n")
     return 
 
 def spectra_loading():

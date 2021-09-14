@@ -2,6 +2,8 @@
 """
 Author: Junda Huang
 
+Script to cluster AIF fragments to precursor ions calculated by MSClust
+
 Command line input: python3 msclust-aif.py fullscanmsclust.csv 
                     aifmsclustready.csv fullscansim.csv fullscanmic.csv
                     [aifmsclust.csv] retention_time_tolerance 
@@ -21,11 +23,12 @@ from scipy.stats import pearsonr
 def peaks_parse(csv):
     """
     fullscan data parse, peak, ret.time, mass, cluster etc. into a dictionary
-
-    input:
-        file(string): input file name of the fullscan file
-    output:
-        
+    params:
+        csv(string): input file name of the fullscan file
+    return:
+        peaks_dict(dictionary):
+        sample_list(list):
+        file_header(list):
     """
     peaks_dict = {}
     file_header = []
@@ -53,6 +56,13 @@ def peaks_parse(csv):
 
 def sim_mic_parse(csv):
     """
+    sim or mic file data parse
+    peak, ret.time, mass, cluster etc. into a dictionary
+    params:
+        csv(string): input file name of the sim or mic file
+    return:
+        prec_dict(dictionary): sim or mic value as the precursor ion and parse 
+                                their info into dictionary
     """
     prec_dict = {}
     with open (csv, 'r') as sim_mic_file:
@@ -78,18 +88,6 @@ def masspattern_match(list1, list2, threshold, threshold_confidence):
         match(boolean): if the two lists' pattern match
     """
     match = True
-    #poplist = []
-    #for i in range(len(list2)):
-    #    if list2[i] == 0:
-    #        continue
-    #    elif list2[i].is_integer():
-    #        continue
-    #    else:
-    #        poplist.append(i)
-    #if len(poplist) >= 2:
-    #    print(poplist)
-    #for n in poplist:
-    #    list2[n] = 0
     if len(list1) != len(list2):
         raise ValueError\
             ("precursor/fragment sample sizes do not match")
@@ -109,6 +107,14 @@ def masspattern_match(list1, list2, threshold, threshold_confidence):
 
 def retention_control(ret1, ret2, retention_time_tolerance):
     """
+    check if two retention time are within the tolerance level
+    params:
+        ret1(int): retention time to be compared in mili seconds
+        ret2(int): retention time to be compared in mili seconds
+        retention_time_tolerance(float): limit set for retention time 
+                                            differences window
+    return:
+        control(boolean): within tolerance(True) or not(False)
     """
     if abs(ret1 - ret2) <= retention_time_tolerance:
         control = True
@@ -158,6 +164,11 @@ def aif_cluster(peaks_dict, sample_list, prec_dict, retention_time_tolerance,\
         peaks_dict[prec_new] = prec_dict[prec]
     return peaks_dict
 
+def clusters_compare(peaks_dict, cluster_dict):
+    """
+    """
+    return
+
 def output_write(dict, header, out):
     """
     """
@@ -166,10 +177,8 @@ def output_write(dict, header, out):
         writer = csv.DictWriter(file, fieldnames = fieldnames)
         writer.writeheader()
         for k, v in dict.items():
-            #rowdict = dict(zip(*({i : j} for i, j in zip(fieldnames, v))))
             rowdict = {}
             for i in range(len(fieldnames)):
-                #print(len(fieldnames), len(v))
                 if fieldnames[i] == 'peak-aif':
                     rowdict[fieldnames[i]] = k
                 else:
@@ -178,7 +187,16 @@ def output_write(dict, header, out):
     return file
 
 def main():
+    """
+    The main function
+    """
+    peaks_parse(csv)
+    sim_mic_parse(csv)
+    aif_cluster(peaks_dict, sample_list, prec_dict, retention_time_tolerance,\
+    correlation_threshold, correlation_threshold_confidence)
+    output_write(dict, header, out)
     return
+
 # main
 if __name__ == '__main__':
 

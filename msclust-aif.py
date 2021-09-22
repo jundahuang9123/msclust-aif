@@ -167,6 +167,7 @@ def aif_cluster(peaks_dict, sample_list, prec_dict, retention_time_tolerance,\
 def clusters_compare(peaks_dict, cluster_dict):
     """
     """
+    
     return
 
 def output_write(dict, header, out):

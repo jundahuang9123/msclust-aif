@@ -21,7 +21,33 @@ from matchms.similarity import CosineGreedy
 
 # functions
 
-def match_ms_score(mgf_file, references_file, output):
+def matchms_score(q, q_spectra, ref_spectra, reference):
+    """
+    """
+    if '.msp' in reference:
+        for r in load_from_msp(reference):
+            tolerence = float(q.metadata['precursormz'])
+            #tolerence = float(q.metadata['pepmass'][0])
+            if 'precursormz' in r.metadata.keys():
+                target = float(r.metadata['precursormz'].replace(',','.'))
+                if abs(target - tolerence) <= 0.5:
+                    r = normalize_intensities(default_filters(r))
+                    ref_spectra.append(r)
+    elif '.mgf' in reference:
+        for r in load_from_mgf(reference):
+            tolerence = float(q.metadata['precursormz'])
+            if 'pepmass' in r.metadata.keys():
+                target = float(r.metadata['pepmass'][0])
+                if abs(target - tolerence) <= 0.5:
+                    r = normalize_intensities(default_filters(r))
+                    ref_spectra.append(r)
+    if ref_spectra != []:
+        matches = calculate_scores(ref_spectra, q_spectra, CosineGreedy())
+        return matches
+    else:
+        return None
+
+def matchms_to_file(mgf_file, references_file, output):
     """
     Find spectra matches from references library, calculate matches scores 
     and write into output file
@@ -40,6 +66,34 @@ def match_ms_score(mgf_file, references_file, output):
         for q in queries: 
             q_spectra = [normalize_intensities(default_filters(q))]
             ref_spectra = []
+            matches = matchms_score(q, q_spectra, ref_spectra, \
+                references_file)
+            if matches != None:
+                for match in matches:
+                    (reference, query, match) = match
+                    if reference is not query and match["matches"] >= 1:
+                        # and \
+                        #abs(int(reference.metadata['scans']) \
+                        #    - int(query.metadata['scan nr'])) <= 3:
+                        out.write(f"Reference precursormz:\
+                            {reference.metadata['precursormz']}\n")
+                        #out.write(f"Reference precursormz:\
+                        #    {reference.metadata['pepmass']}\n")
+                        #out.write(f"Reference scan:\
+                        #    {reference.metadata['scans']}\n")
+                        out.write(f"Reference Name:\
+                            {reference.metadata['name']}\n")
+                        if 'formula' in reference.metadata.keys():
+                            out.write(f"Reference Formula:\
+                                {reference.metadata['formula']}\n")
+                        out.write(f"Query scan id:\
+                            {query.metadata['scan nr']}\n")
+                        #    {query.metadata['scans']}\n")
+                        out.write(f"Score: {match['score']:.4f}\n")
+                        out.write(f"Number of matching peaks:\
+                            {match['matches']}\n")
+                        out.write("----------------------------\n")
+            """
             for r in load_from_msp(references_file):
                 tolerence = float(q.metadata['precursormz'])
                 #tolerence = float(q.metadata['pepmass'][0])
@@ -63,18 +117,10 @@ def match_ms_score(mgf_file, references_file, output):
                             {query.metadata['scan nr']}\n")
                         out.write(f"Query mass:\
                             {query.metadata['precursormz']}\n")
-                    #    out.write(f"Query mass:\
-                    #        {query.metadata['pepmass']}\n")    
                         out.write(f"Score: {match['score']:.4f}\n")
                         out.write(f"Number of matching peaks:\
                             {match['matches']}\n")
-                    #print(f"Query mass:\
-                    #    {query.metadata['pepmass']}\n")    
-                    #print(f"Score: {match['score']:.4f}\n")
-                    #print(f"Number of matching peaks:\
-                    #    {match['matches']}\n")
-                        out.write("----------------------------\n")
-                    #print("----------------------------\n")
+                        out.write("----------------------------\n")"""
     return 
 
 def spectra_loading():
@@ -93,7 +139,7 @@ def main(query, ref, output):
     Returns:
         output(string): file name of the output text file
     '''
-    match_ms_score(query, ref, output)
+    matchms_to_file(query, ref, output)
     #spectra_loading()
     return
 

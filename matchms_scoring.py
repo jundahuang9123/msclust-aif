@@ -19,6 +19,7 @@ from matchms.filtering import default_filters
 from matchms.filtering import normalize_intensities
 from matchms import calculate_scores, Spectrum, Scores
 from matchms.similarity import CosineGreedy
+from matchms.Spikes import Spikes
 
 # functions
 
@@ -37,8 +38,10 @@ def matchms_score(q, q_spectra, ref_spectra, reference):
     elif '.mgf' in reference:
         for r in load_from_mgf(reference):
             tolerence = float(q.metadata['precursormz'])
+            #tolerence = float(q.metadata['pepmass'][0])
             if 'pepmass' in r.metadata.keys():
                 target = float(r.metadata['pepmass'][0])
+                #target = float(r.metadata['precursormz'])
                 if abs(target - tolerence) <= 0.5:
                     r = normalize_intensities(default_filters(r))
                     ref_spectra.append(r)
@@ -47,6 +50,17 @@ def matchms_score(q, q_spectra, ref_spectra, reference):
         return matches
     else:
         return None
+
+def un_normalize(spectrum):
+    """
+    """
+    s = spectrum.clone()
+    max_in = np.max(s.peaks.intensities)
+    mz, intensity = s.peaks
+    un_norm = intensity * max_in
+    s.peaks = Spikes(mz = mz, intensities = un_norm)
+    return s
+
 
 def matchms_to_file(mgf_file, references_file, output):
     """
@@ -74,32 +88,40 @@ def matchms_to_file(mgf_file, references_file, output):
                 for match in matches:
                     (reference, query, match) = match
                     if reference is not query and match["matches"] >= 1 and \
-                        abs(int(reference.metadata['scans']) \
-                            - int(query.metadata['scan nr'])) <= 3:
+                        abs((int(reference.metadata['rtinseconds'])/60) \
+                            -(int(query.metadata['retention'])/1000000))<=0.4:
                         #out.write(f"Reference precursormz:\
                         #    {reference.metadata['precursormz']}\n")
                         out.write(f"Reference precursormz:\
                             {reference.metadata['pepmass']}\n")
-                        out.write(f"Reference scan:\
-                            {reference.metadata['scans']}\n")
+                        out.write(f"Reference rettime:\
+                            {int(reference.metadata['rtinseconds'])/60}\n")
                         #out.write(f"Reference Name:\
                         #    {reference.metadata['name']}\n")
                         if 'formula' in reference.metadata.keys():
                             out.write(f"Reference Formula:\
                                 {reference.metadata['formula']}\n")
-                        out.write(f"Query scan id:\
-                            {query.metadata['scan nr']}\n")
+                        out.write(f"Query rettime:\
+                            {int(query.metadata['retention'])/1000000}\n")
                         #    {query.metadata['scans']}\n")
                         out.write(f"Score: {match['score']:.4f}\n")
                         out.write(f"Number of matching peaks:\
                             {match['matches']}\n")
                         out.write("----------------------------\n")
-                        spec_r = reference.plot()
-                        spec_q = q_spectra[0].plot()
-                        spec_r.savefig('{}.png'.\
+                        if 0.6 >= match['score'] >= 0.4:
+                            spec_r = un_normalize(reference).plot()
+                            spec_q = un_normalize(q_spectra[0]).plot()
+                            spec_r.savefig('outputrev/{}.png'.\
+                                format(reference.metadata['pepmass']))
+                            spec_q.savefig('outputrev/{}.png'.\
+                                format(query.metadata['precursormz']))
+                        '''
+                        spec_r = un_normalize(reference).plot()
+                        spec_q = un_normalize(q_spectra[0]).plot()
+                        spec_r.savefig('output/{}.png'.\
                             format(reference.metadata['pepmass']))
-                        spec_q.savefig('{}.png'.\
-                            format(query.metadata['precursormz']))
+                        spec_q.savefig('output/{}.png'.\
+                            format(query.metadata['precursormz']))'''
             """
             for r in load_from_msp(references_file):
                 tolerence = float(q.metadata['precursormz'])

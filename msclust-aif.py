@@ -146,8 +146,6 @@ def aif_cluster(peaks_dict, sample_list, prec_dict, retention_time_tolerance,\
                     precfinal.append(prec)
                     frag_info['clusterId1'] = prec_info['clusterId1']
                     frag_info['membership1'] = abs(correlation)
-                    #print(frag_info['clusterId1'], \
-                    #    frag_info['membership1'])
                 else: 
                     #elif match and frag_info['cluster1'] != '':
                     #    frag_info['clusterId2'] = prec_info['clusterId']

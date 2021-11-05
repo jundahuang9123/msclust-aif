@@ -10,21 +10,8 @@ Command line input: python3 msms_processing.py msms.mgf less_msms.mgf
 # import statements
 import os
 from sys import argv
-import numpy as np
-from matchms.importing import load_from_mgf
 
 # functions
-
-'''def get_mgf(mgf):
-    """
-    """
-    msms = load_from_mgf(mgf)
-    for i, key in enumerate(msms):
-        print("-------------------")
-        if i == 0
-            for k in key.metadata.['charge']:
-                print(k)
-    return msms'''
 
 def parse_file(file):
     """

@@ -1,0 +1,595 @@
+AIF:367.1029 17.336292
+MSMS:367.1032 17.100000
+Match peaks:1
+8 unique AIF                             10 unique MSMS
+---------------
+AIF:367.1029 17.336292
+MSMS:367.1035 17.266667
+Match peaks:2
+7 unique AIF                             15 unique MSMS
+---------------
+AIF:197.8076 2.671495
+MSMS:197.8078 2.550000
+Match peaks:2
+2 unique AIF                             15 unique MSMS
+---------------
+AIF:437.1447 25.060678
+MSMS:437.1454 24.683333
+Match peaks:7
+8 unique AIF                             8 unique MSMS
+---------------
+AIF:437.1447 25.060678
+MSMS:437.1452 24.850000
+Match peaks:8
+7 unique AIF                             12 unique MSMS
+---------------
+AIF:333.0599 2.166972
+MSMS:333.0589 2.416667
+Match peaks:3
+0 unique AIF                             18 unique MSMS
+---------------
+AIF:329.2329 29.685556
+MSMS:329.2334 29.683333
+Match peaks:3
+3 unique AIF                             12 unique MSMS
+---------------
+AIF:293.0986 1.886011
+MSMS:293.0989 1.866667
+Match peaks:1
+0 unique AIF                             26 unique MSMS
+---------------
+AIF:543.1503 25.154522
+MSMS:543.1507 24.900000
+Match peaks:7
+8 unique AIF                             20 unique MSMS
+---------------
+AIF:543.1503 25.154522
+MSMS:543.1508 25.500000
+Match peaks:8
+7 unique AIF                             17 unique MSMS
+---------------
+AIF:349.1190 26.151781
+MSMS:349.1193 25.883333
+Match peaks:26
+23 unique AIF                             6 unique MSMS
+---------------
+AIF:349.1190 26.151781
+MSMS:349.1192 26.050000
+Match peaks:23
+26 unique AIF                             8 unique MSMS
+---------------
+AIF:96.9692 2.576057
+MSMS:96.9694 2.350000
+Match peaks:2
+20 unique AIF                             0 unique MSMS
+---------------
+AIF:96.9692 2.576057
+MSMS:96.9694 2.516667
+Match peaks:2
+20 unique AIF                             1 unique MSMS
+---------------
+AIF:164.0715 3.015578
+MSMS:164.0717 3.083333
+Match peaks:2
+3 unique AIF                             12 unique MSMS
+---------------
+AIF:191.0556 2.102290
+MSMS:191.0561 1.966667
+Match peaks:10
+3 unique AIF                             18 unique MSMS
+---------------
+AIF:191.0556 2.102290
+MSMS:191.0556 2.150000
+Match peaks:1
+12 unique AIF                             13 unique MSMS
+---------------
+AIF:191.0556 2.102290
+MSMS:191.056 2.316667
+Match peaks:6
+7 unique AIF                             17 unique MSMS
+---------------
+AIF:529.1342 21.736864
+MSMS:529.1351 21.500000
+Match peaks:9
+15 unique AIF                             19 unique MSMS
+---------------
+AIF:529.1342 21.736864
+MSMS:529.1349 21.666667
+Match peaks:10
+14 unique AIF                             19 unique MSMS
+---------------
+AIF:529.1342 21.736864
+MSMS:529.1351 21.833333
+Match peaks:7
+17 unique AIF                             18 unique MSMS
+---------------
+AIF:367.1031 15.805543
+MSMS:367.1034 15.450000
+Match peaks:3
+7 unique AIF                             17 unique MSMS
+---------------
+AIF:367.1031 15.805543
+MSMS:367.1034 15.766667
+Match peaks:4
+6 unique AIF                             15 unique MSMS
+---------------
+AIF:367.1031 15.805543
+MSMS:367.1032 15.933333
+Match peaks:3
+7 unique AIF                             19 unique MSMS
+---------------
+AIF:367.1031 15.805543
+MSMS:367.1032 16.100000
+Match peaks:3
+7 unique AIF                             20 unique MSMS
+---------------
+AIF:437.1448 23.776285
+MSMS:437.1454 23.533333
+Match peaks:4
+22 unique AIF                             16 unique MSMS
+---------------
+AIF:437.1448 23.776285
+MSMS:437.1452 23.700000
+Match peaks:4
+22 unique AIF                             9 unique MSMS
+---------------
+AIF:529.1346 22.624596
+MSMS:529.1349 22.316667
+Match peaks:7
+16 unique AIF                             19 unique MSMS
+---------------
+AIF:529.1346 22.624596
+MSMS:529.135 22.500000
+Match peaks:6
+17 unique AIF                             12 unique MSMS
+---------------
+AIF:529.1346 22.624596
+MSMS:529.1353 22.666667
+Match peaks:7
+16 unique AIF                             19 unique MSMS
+---------------
+AIF:529.1346 22.624596
+MSMS:529.135 22.850000
+Match peaks:3
+20 unique AIF                             15 unique MSMS
+---------------
+AIF:529.1346 22.624596
+MSMS:529.1349 23.016667
+Match peaks:5
+18 unique AIF                             18 unique MSMS
+---------------
+AIF:353.0874 14.489157
+MSMS:353.0877 14.150000
+Match peaks:3
+7 unique AIF                             20 unique MSMS
+---------------
+AIF:353.0874 14.489157
+MSMS:353.0877 14.333333
+Match peaks:3
+7 unique AIF                             14 unique MSMS
+---------------
+AIF:353.0874 14.489157
+MSMS:353.0878 14.500000
+Match peaks:2
+8 unique AIF                             12 unique MSMS
+---------------
+AIF:367.1029 13.441806
+MSMS:367.1032 13.166667
+Match peaks:4
+7 unique AIF                             14 unique MSMS
+---------------
+AIF:367.1029 13.441806
+MSMS:367.1032 13.350000
+Match peaks:4
+7 unique AIF                             11 unique MSMS
+---------------
+AIF:367.1029 13.441806
+MSMS:367.1031 13.516667
+Match peaks:4
+7 unique AIF                             13 unique MSMS
+---------------
+AIF:515.1188 20.754496
+MSMS:515.1194 20.400000
+Match peaks:1
+4 unique AIF                             22 unique MSMS
+---------------
+AIF:515.1188 20.754496
+MSMS:515.1192 20.583333
+Match peaks:1
+4 unique AIF                             18 unique MSMS
+---------------
+AIF:515.1188 20.754496
+MSMS:515.1194 20.750000
+Match peaks:1
+4 unique AIF                             20 unique MSMS
+---------------
+AIF:515.1187 19.453966
+MSMS:515.1192 19.183333
+Match peaks:6
+6 unique AIF                             18 unique MSMS
+---------------
+AIF:515.1187 19.453966
+MSMS:515.1195 19.366667
+Match peaks:5
+7 unique AIF                             15 unique MSMS
+---------------
+AIF:515.1187 19.453966
+MSMS:515.1195 19.533333
+Match peaks:8
+4 unique AIF                             18 unique MSMS
+---------------
+AIF:515.1187 19.453966
+MSMS:515.1193 19.700000
+Match peaks:5
+7 unique AIF                             11 unique MSMS
+---------------
+AIF:424.1247 16.981836
+MSMS:424.125 16.850000
+Match peaks:3
+2 unique AIF                             25 unique MSMS
+---------------
+AIF:453.1399 17.597675
+MSMS:453.1405 17.333333
+Match peaks:3
+4 unique AIF                             16 unique MSMS
+---------------
+AIF:311.2225 36.974335
+MSMS:311.2229 36.950000
+Match peaks:1
+0 unique AIF                             14 unique MSMS
+---------------
+AIF:453.1400 18.771399
+MSMS:453.1406 18.500000
+Match peaks:3
+14 unique AIF                             17 unique MSMS
+---------------
+AIF:488.1610 1.916526
+MSMS:488.162 1.883333
+Match peaks:1
+1 unique AIF                             17 unique MSMS
+---------------
+AIF:529.1347 23.357080
+MSMS:529.1349 23.016667
+Match peaks:9
+18 unique AIF                             14 unique MSMS
+---------------
+AIF:529.1347 23.357080
+MSMS:529.135 23.183333
+Match peaks:10
+17 unique AIF                             11 unique MSMS
+---------------
+AIF:473.1079 19.251799
+MSMS:473.1089 19.283333
+Match peaks:1
+6 unique AIF                             22 unique MSMS
+---------------
+AIF:333.0586 2.605149
+MSMS:333.0589 2.416667
+Match peaks:3
+2 unique AIF                             18 unique MSMS
+---------------
+AIF:466.1713 23.880207
+MSMS:466.1717 23.683333
+Match peaks:6
+2 unique AIF                             26 unique MSMS
+---------------
+AIF:499.1245 22.265533
+MSMS:499.1246 22.383333
+Match peaks:1
+0 unique AIF                             20 unique MSMS
+---------------
+AIF:499.1245 22.265533
+MSMS:499.1246 22.550000
+Match peaks:1
+0 unique AIF                             26 unique MSMS
+---------------
+AIF:216.0874 11.448986
+MSMS:216.0876 11.050000
+Match peaks:1
+1 unique AIF                             15 unique MSMS
+---------------
+AIF:216.0874 11.448986
+MSMS:216.0876 11.216667
+Match peaks:1
+1 unique AIF                             16 unique MSMS
+---------------
+AIF:313.2382 39.504360
+MSMS:313.2385 39.450000
+Match peaks:2
+0 unique AIF                             12 unique MSMS
+---------------
+AIF:313.2382 39.504360
+MSMS:313.2385 39.616667
+Match peaks:2
+0 unique AIF                             12 unique MSMS
+---------------
+AIF:379.1296 28.414713
+MSMS:379.13 28.300000
+Match peaks:4
+1 unique AIF                             52 unique MSMS
+---------------
+AIF:437.1450 23.549410
+MSMS:437.1454 23.533333
+Match peaks:3
+3 unique AIF                             17 unique MSMS
+---------------
+AIF:437.1450 23.549410
+MSMS:437.1452 23.700000
+Match peaks:3
+3 unique AIF                             10 unique MSMS
+---------------
+AIF:525.2335 17.434849
+MSMS:525.2341 17.216667
+Match peaks:2
+6 unique AIF                             10 unique MSMS
+---------------
+AIF:735.2130 16.248407
+MSMS:735.2136 16.016667
+Match peaks:2
+2 unique AIF                             15 unique MSMS
+---------------
+AIF:735.2130 16.248407
+MSMS:735.214 16.183333
+Match peaks:4
+0 unique AIF                             26 unique MSMS
+---------------
+AIF:288.9360 1.537667
+MSMS:288.9363 1.466667
+Match peaks:4
+1 unique AIF                             9 unique MSMS
+---------------
+AIF:288.9360 1.537667
+MSMS:288.9364 1.633333
+Match peaks:4
+1 unique AIF                             14 unique MSMS
+---------------
+AIF:365.1136 24.075268
+MSMS:365.1142 23.800000
+Match peaks:16
+27 unique AIF                             2 unique MSMS
+---------------
+AIF:365.1136 24.075268
+MSMS:365.1142 24.100000
+Match peaks:15
+28 unique AIF                             4 unique MSMS
+---------------
+AIF:191.0557 2.280130
+MSMS:191.0561 1.966667
+Match peaks:7
+0 unique AIF                             21 unique MSMS
+---------------
+AIF:191.0557 2.280130
+MSMS:191.0556 2.150000
+Match peaks:1
+6 unique AIF                             13 unique MSMS
+---------------
+AIF:191.0557 2.280130
+MSMS:191.056 2.316667
+Match peaks:6
+1 unique AIF                             17 unique MSMS
+---------------
+AIF:707.1819 13.018694
+MSMS:707.1824 12.633333
+Match peaks:1
+1 unique AIF                             32 unique MSMS
+---------------
+AIF:707.1819 13.018694
+MSMS:707.1826 12.800000
+Match peaks:1
+1 unique AIF                             27 unique MSMS
+---------------
+AIF:707.1819 13.018694
+MSMS:707.1827 12.983333
+Match peaks:1
+1 unique AIF                             19 unique MSMS
+---------------
+AIF:379.1296 26.753460
+MSMS:379.1299 26.550000
+Match peaks:13
+3 unique AIF                             49 unique MSMS
+---------------
+AIF:379.1296 26.753460
+MSMS:379.1301 26.716667
+Match peaks:12
+4 unique AIF                             31 unique MSMS
+---------------
+AIF:257.0557 19.911615
+MSMS:257.0561 19.683333
+Match peaks:6
+5 unique AIF                             12 unique MSMS
+---------------
+AIF:460.1666 1.930567
+MSMS:460.167 1.900000
+Match peaks:1
+2 unique AIF                             21 unique MSMS
+---------------
+AIF:499.1242 21.283741
+MSMS:499.1249 21.216667
+Match peaks:7
+9 unique AIF                             23 unique MSMS
+---------------
+AIF:499.1242 21.283741
+MSMS:499.1248 21.483333
+Match peaks:3
+13 unique AIF                             14 unique MSMS
+---------------
+AIF:499.1242 21.283741
+MSMS:499.1246 21.650000
+Match peaks:4
+12 unique AIF                             16 unique MSMS
+---------------
+AIF:499.3538 49.559120
+MSMS:499.3543 49.450000
+Match peaks:14
+23 unique AIF                             4 unique MSMS
+---------------
+AIF:529.1347 22.454218
+MSMS:529.1353 22.150000
+Match peaks:7
+11 unique AIF                             15 unique MSMS
+---------------
+AIF:529.1347 22.454218
+MSMS:529.1349 22.316667
+Match peaks:6
+12 unique AIF                             20 unique MSMS
+---------------
+AIF:529.1347 22.454218
+MSMS:529.135 22.500000
+Match peaks:4
+14 unique AIF                             14 unique MSMS
+---------------
+AIF:529.1347 22.454218
+MSMS:529.1353 22.666667
+Match peaks:6
+12 unique AIF                             20 unique MSMS
+---------------
+AIF:529.1347 22.454218
+MSMS:529.135 22.850000
+Match peaks:5
+13 unique AIF                             13 unique MSMS
+---------------
+AIF:296.8817 1.742819
+MSMS:296.8821 1.666667
+Match peaks:1
+6 unique AIF                             4 unique MSMS
+---------------
+AIF:296.8817 1.742819
+MSMS:296.8821 1.833333
+Match peaks:1
+6 unique AIF                             5 unique MSMS
+---------------
+AIF:272.9584 1.533246
+MSMS:272.9588 1.433333
+Match peaks:1
+0 unique AIF                             15 unique MSMS
+---------------
+AIF:272.9584 1.533246
+MSMS:272.9588 1.616667
+Match peaks:1
+0 unique AIF                             18 unique MSMS
+---------------
+AIF:387.1138 2.237863
+MSMS:387.1143 1.866667
+Match peaks:3
+0 unique AIF                             15 unique MSMS
+---------------
+AIF:387.1138 2.237863
+MSMS:387.1141 2.033333
+Match peaks:3
+0 unique AIF                             17 unique MSMS
+---------------
+AIF:387.1138 2.237863
+MSMS:387.1142 2.216667
+Match peaks:3
+0 unique AIF                             12 unique MSMS
+---------------
+AIF:353.0874 8.660025
+MSMS:353.0879 8.433333
+Match peaks:4
+2 unique AIF                             19 unique MSMS
+---------------
+AIF:353.0874 8.660025
+MSMS:353.0879 8.600000
+Match peaks:4
+2 unique AIF                             17 unique MSMS
+---------------
+AIF:353.0874 8.660025
+MSMS:353.0878 8.766667
+Match peaks:4
+2 unique AIF                             12 unique MSMS
+---------------
+AIF:353.0874 8.660025
+MSMS:353.0879 8.950000
+Match peaks:4
+2 unique AIF                             15 unique MSMS
+---------------
+AIF:435.9577 2.901584
+MSMS:435.9578 2.866667
+Match peaks:1
+0 unique AIF                             41 unique MSMS
+---------------
+AIF:179.0348 13.848856
+MSMS:179.035 13.583333
+Match peaks:4
+1 unique AIF                             5 unique MSMS
+---------------
+AIF:179.0348 13.848856
+MSMS:179.035 13.750000
+Match peaks:3
+2 unique AIF                             6 unique MSMS
+---------------
+AIF:499.1240 21.781969
+MSMS:499.1248 21.483333
+Match peaks:3
+3 unique AIF                             14 unique MSMS
+---------------
+AIF:499.1240 21.781969
+MSMS:499.1246 21.650000
+Match peaks:3
+3 unique AIF                             17 unique MSMS
+---------------
+AIF:707.1818 11.828029
+MSMS:707.1824 11.766667
+Match peaks:1
+0 unique AIF                             16 unique MSMS
+---------------
+AIF:707.1818 11.828029
+MSMS:707.1826 11.933333
+Match peaks:1
+0 unique AIF                             23 unique MSMS
+---------------
+AIF:707.1818 11.828029
+MSMS:707.1824 12.116667
+Match peaks:1
+0 unique AIF                             23 unique MSMS
+---------------
+AIF:337.0926 15.174222
+MSMS:337.0929 14.933333
+Match peaks:5
+4 unique AIF                             18 unique MSMS
+---------------
+AIF:337.0926 15.174222
+MSMS:337.093 15.100000
+Match peaks:4
+5 unique AIF                             13 unique MSMS
+---------------
+AIF:529.1348 23.188208
+MSMS:529.135 22.850000
+Match peaks:6
+10 unique AIF                             12 unique MSMS
+---------------
+AIF:529.1348 23.188208
+MSMS:529.1349 23.016667
+Match peaks:6
+10 unique AIF                             17 unique MSMS
+---------------
+AIF:529.1348 23.188208
+MSMS:529.135 23.183333
+Match peaks:6
+10 unique AIF                             15 unique MSMS
+---------------
+AIF:365.1137 23.299513
+MSMS:365.1139 23.166667
+Match peaks:2
+1 unique AIF                             22 unique MSMS
+---------------
+AIF:275.1133 15.228836
+MSMS:275.1135 14.933333
+Match peaks:2
+0 unique AIF                             11 unique MSMS
+---------------
+AIF:499.1244 21.574766
+MSMS:499.1249 21.216667
+Match peaks:2
+11 unique AIF                             28 unique MSMS
+---------------
+AIF:499.1244 21.574766
+MSMS:499.1248 21.483333
+Match peaks:1
+12 unique AIF                             16 unique MSMS
+---------------
+AIF:499.1244 21.574766
+MSMS:499.1246 21.650000
+Match peaks:1
+12 unique AIF                             19 unique MSMS
+---------------

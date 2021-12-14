@@ -1,0 +1,780 @@
+Reference precursormz:                            (367.1032, None)
+Reference scan:                            2989
+Query scan id:                            3136
+Score: 0.4079
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (367.1035, None)
+Reference scan:                            3020
+Query scan id:                            3136
+Score: 0.9928
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (197.8078, None)
+Reference scan:                            552
+Query scan id:                            497
+Score: 0.6550
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (437.1454, None)
+Reference scan:                            4258
+Query scan id:                            4554
+Score: 0.8437
+Number of matching peaks:                            7
+----------------------------
+Reference precursormz:                            (437.1452, None)
+Reference scan:                            4290
+Query scan id:                            4554
+Score: 0.8475
+Number of matching peaks:                            7
+----------------------------
+Reference precursormz:                            (333.0267, None)
+Reference scan:                            449
+Query scan id:                            383
+Score: 0.3610
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (333.0589, None)
+Reference scan:                            520
+Query scan id:                            383
+Score: 0.7458
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (367.1032, None)
+Reference scan:                            2498
+Query scan id:                            2568
+Score: 0.0055
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (329.2334, None)
+Reference scan:                            5039
+Query scan id:                            5250
+Score: 0.3314
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (293.0989, None)
+Reference scan:                            363
+Query scan id:                            318
+Score: 0.0045
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (543.1507, None)
+Reference scan:                            4297
+Query scan id:                            4573
+Score: 0.8909
+Number of matching peaks:                            7
+----------------------------
+Reference precursormz:                            (543.1508, None)
+Reference scan:                            4390
+Query scan id:                            4573
+Score: 0.4617
+Number of matching peaks:                            8
+----------------------------
+Reference precursormz:                            (349.1193, None)
+Reference scan:                            4450
+Query scan id:                            4737
+Score: 0.7628
+Number of matching peaks:                            25
+----------------------------
+Reference precursormz:                            (349.1192, None)
+Reference scan:                            4482
+Query scan id:                            4737
+Score: 0.7793
+Number of matching peaks:                            23
+----------------------------
+Reference precursormz:                            (96.9694, None)
+Reference scan:                            500
+Query scan id:                            475
+Score: 0.9651
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (96.9694, None)
+Reference scan:                            544
+Query scan id:                            475
+Score: 0.9739
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (164.0717, None)
+Reference scan:                            657
+Query scan id:                            571
+Score: 0.9908
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (191.0561, None)
+Reference scan:                            397
+Query scan id:                            368
+Score: 0.9960
+Number of matching peaks:                            10
+----------------------------
+Reference precursormz:                            (191.0198, None)
+Reference scan:                            413
+Query scan id:                            368
+Score: 0.9962
+Number of matching peaks:                            11
+----------------------------
+Reference precursormz:                            (191.0556, None)
+Reference scan:                            453
+Query scan id:                            368
+Score: 0.1995
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (191.0198, None)
+Reference scan:                            467
+Query scan id:                            368
+Score: 0.4055
+Number of matching peaks:                            6
+----------------------------
+Reference precursormz:                            (191.056, None)
+Reference scan:                            495
+Query scan id:                            368
+Score: 0.2798
+Number of matching peaks:                            9
+----------------------------
+Reference precursormz:                            (191.0197, None)
+Reference scan:                            508
+Query scan id:                            368
+Score: 0.1808
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (529.1351, None)
+Reference scan:                            3717
+Query scan id:                            3950
+Score: 0.5412
+Number of matching peaks:                            9
+----------------------------
+Reference precursormz:                            (529.1349, None)
+Reference scan:                            3745
+Query scan id:                            3950
+Score: 0.1726
+Number of matching peaks:                            9
+----------------------------
+Reference precursormz:                            (529.1351, None)
+Reference scan:                            3777
+Query scan id:                            3950
+Score: 0.1747
+Number of matching peaks:                            7
+----------------------------
+Reference precursormz:                            (367.1034, None)
+Reference scan:                            2710
+Query scan id:                            2856
+Score: 0.0205
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (367.1034, None)
+Reference scan:                            2757
+Query scan id:                            2856
+Score: 0.0242
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (367.1032, None)
+Reference scan:                            2789
+Query scan id:                            2856
+Score: 0.0238
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (367.1032, None)
+Reference scan:                            2825
+Query scan id:                            2856
+Score: 0.0243
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (437.1454, None)
+Reference scan:                            4060
+Query scan id:                            4327
+Score: 0.9507
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (437.1452, None)
+Reference scan:                            4090
+Query scan id:                            4327
+Score: 0.9340
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (132.0302, None)
+Reference scan:                            359
+Query scan id:                            321
+Score: 0.2090
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (529.1349, None)
+Reference scan:                            3854
+Query scan id:                            4118
+Score: 0.9001
+Number of matching peaks:                            7
+----------------------------
+Reference precursormz:                            (529.135, None)
+Reference scan:                            3887
+Query scan id:                            4118
+Score: 0.9138
+Number of matching peaks:                            6
+----------------------------
+Reference precursormz:                            (529.1353, None)
+Reference scan:                            3916
+Query scan id:                            4118
+Score: 0.8054
+Number of matching peaks:                            7
+----------------------------
+Reference precursormz:                            (529.135, None)
+Reference scan:                            3944
+Query scan id:                            4118
+Score: 0.0112
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (529.1349, None)
+Reference scan:                            3974
+Query scan id:                            4118
+Score: 0.4793
+Number of matching peaks:                            5
+----------------------------
+Reference precursormz:                            (353.0877, None)
+Reference scan:                            2500
+Query scan id:                            2621
+Score: 0.9944
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (353.0877, None)
+Reference scan:                            2530
+Query scan id:                            2621
+Score: 0.9949
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (353.0878, None)
+Reference scan:                            2558
+Query scan id:                            2621
+Score: 0.9918
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (367.1032, None)
+Reference scan:                            2330
+Query scan id:                            2426
+Score: 0.9016
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (367.1032, None)
+Reference scan:                            2362
+Query scan id:                            2426
+Score: 0.8884
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (367.1031, None)
+Reference scan:                            2393
+Query scan id:                            2426
+Score: 0.8824
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (515.1194, None)
+Reference scan:                            3530
+Query scan id:                            3765
+Score: 0.0076
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (515.1192, None)
+Reference scan:                            3565
+Query scan id:                            3765
+Score: 0.0043
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (515.1194, None)
+Reference scan:                            3597
+Query scan id:                            3765
+Score: 0.0051
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (515.1192, None)
+Reference scan:                            3322
+Query scan id:                            3516
+Score: 0.4828
+Number of matching peaks:                            6
+----------------------------
+Reference precursormz:                            (515.1195, None)
+Reference scan:                            3355
+Query scan id:                            3516
+Score: 0.4558
+Number of matching peaks:                            5
+----------------------------
+Reference precursormz:                            (515.1195, None)
+Reference scan:                            3382
+Query scan id:                            3516
+Score: 0.6761
+Number of matching peaks:                            8
+----------------------------
+Reference precursormz:                            (515.1193, None)
+Reference scan:                            3417
+Query scan id:                            3516
+Score: 0.7009
+Number of matching peaks:                            5
+----------------------------
+Reference precursormz:                            (424.125, None)
+Reference scan:                            2947
+Query scan id:                            3075
+Score: 0.6269
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (453.1405, None)
+Reference scan:                            3029
+Query scan id:                            3191
+Score: 0.9420
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (311.2229, None)
+Reference scan:                            6144
+Query scan id:                            6255
+Score: 0.3907
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (453.1406, None)
+Reference scan:                            3208
+Query scan id:                            3393
+Score: 0.4392
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (488.162, None)
+Reference scan:                            365
+Query scan id:                            325
+Score: 0.9575
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (529.1349, None)
+Reference scan:                            3974
+Query scan id:                            4253
+Score: 0.5239
+Number of matching peaks:                            9
+----------------------------
+Reference precursormz:                            (529.135, None)
+Reference scan:                            4008
+Query scan id:                            4253
+Score: 0.5236
+Number of matching peaks:                            10
+----------------------------
+Reference precursormz:                            (473.1089, None)
+Reference scan:                            3342
+Query scan id:                            3475
+Score: 0.0087
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (333.0589, None)
+Reference scan:                            520
+Query scan id:                            481
+Score: 0.6275
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (466.1717, None)
+Reference scan:                            4086
+Query scan id:                            4346
+Score: 0.9121
+Number of matching peaks:                            6
+----------------------------
+Reference precursormz:                            (499.1246, None)
+Reference scan:                            3867
+Query scan id:                            4051
+Score: 0.1566
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (499.1246, None)
+Reference scan:                            3898
+Query scan id:                            4051
+Score: 0.1163
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (216.0876, None)
+Reference scan:                            1921
+Query scan id:                            1994
+Score: 0.5446
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (216.0876, None)
+Reference scan:                            1951
+Query scan id:                            1994
+Score: 0.5442
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (313.2385, None)
+Reference scan:                            6526
+Query scan id:                            6608
+Score: 0.1927
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (313.2385, None)
+Reference scan:                            6554
+Query scan id:                            6608
+Score: 0.2060
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (379.13, None)
+Reference scan:                            4828
+Query scan id:                            5069
+Score: 0.0929
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (437.1454, None)
+Reference scan:                            4060
+Query scan id:                            4289
+Score: 0.9560
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (437.1452, None)
+Reference scan:                            4090
+Query scan id:                            4289
+Score: 0.9401
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (525.2341, None)
+Reference scan:                            3010
+Query scan id:                            3158
+Score: 0.1402
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (735.2136, None)
+Reference scan:                            2805
+Query scan id:                            2937
+Score: 0.0031
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (735.214, None)
+Reference scan:                            2840
+Query scan id:                            2937
+Score: 0.0082
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (288.9363, None)
+Reference scan:                            264
+Query scan id:                            240
+Score: 0.8364
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (288.9364, None)
+Reference scan:                            305
+Query scan id:                            240
+Score: 0.8262
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (365.1142, None)
+Reference scan:                            4107
+Query scan id:                            4387
+Score: 0.8778
+Number of matching peaks:                            16
+----------------------------
+Reference precursormz:                            (365.1142, None)
+Reference scan:                            4169
+Query scan id:                            4387
+Score: 0.8753
+Number of matching peaks:                            15
+----------------------------
+Reference precursormz:                            (191.0561, None)
+Reference scan:                            397
+Query scan id:                            409
+Score: 0.9987
+Number of matching peaks:                            7
+----------------------------
+Reference precursormz:                            (191.0198, None)
+Reference scan:                            413
+Query scan id:                            409
+Score: 0.9992
+Number of matching peaks:                            7
+----------------------------
+Reference precursormz:                            (191.0556, None)
+Reference scan:                            453
+Query scan id:                            409
+Score: 0.1883
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (191.0198, None)
+Reference scan:                            467
+Query scan id:                            409
+Score: 0.3957
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (191.056, None)
+Reference scan:                            495
+Query scan id:                            409
+Score: 0.2691
+Number of matching peaks:                            7
+----------------------------
+Reference precursormz:                            (191.0197, None)
+Reference scan:                            508
+Query scan id:                            409
+Score: 0.1694
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (191.0197, None)
+Reference scan:                            549
+Query scan id:                            409
+Score: 0.1767
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (707.1824, None)
+Reference scan:                            2221
+Query scan id:                            2334
+Score: 0.0883
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (707.1826, None)
+Reference scan:                            2259
+Query scan id:                            2334
+Score: 0.0954
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (707.1827, None)
+Reference scan:                            2295
+Query scan id:                            2334
+Score: 0.0720
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (379.1299, None)
+Reference scan:                            4558
+Query scan id:                            4834
+Score: 0.2190
+Number of matching peaks:                            14
+----------------------------
+Reference precursormz:                            (379.1301, None)
+Reference scan:                            4586
+Query scan id:                            4834
+Score: 0.1956
+Number of matching peaks:                            12
+----------------------------
+Reference precursormz:                            (257.0561, None)
+Reference scan:                            3412
+Query scan id:                            3610
+Score: 0.3107
+Number of matching peaks:                            6
+----------------------------
+Reference precursormz:                            (460.167, None)
+Reference scan:                            376
+Query scan id:                            328
+Score: 0.7377
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (499.1249, None)
+Reference scan:                            3670
+Query scan id:                            3866
+Score: 0.1841
+Number of matching peaks:                            7
+----------------------------
+Reference precursormz:                            (499.1248, None)
+Reference scan:                            3715
+Query scan id:                            3866
+Score: 0.9135
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (499.1246, None)
+Reference scan:                            3743
+Query scan id:                            3866
+Score: 0.3177
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (499.3543, None)
+Reference scan:                            8084
+Query scan id:                            8026
+Score: 0.9646
+Number of matching peaks:                            15
+----------------------------
+Reference precursormz:                            (529.1353, None)
+Reference scan:                            3826
+Query scan id:                            4084
+Score: 0.9020
+Number of matching peaks:                            7
+----------------------------
+Reference precursormz:                            (529.1349, None)
+Reference scan:                            3854
+Query scan id:                            4084
+Score: 0.1408
+Number of matching peaks:                            6
+----------------------------
+Reference precursormz:                            (529.135, None)
+Reference scan:                            3887
+Query scan id:                            4084
+Score: 0.0727
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (529.1353, None)
+Reference scan:                            3916
+Query scan id:                            4084
+Score: 0.1379
+Number of matching peaks:                            6
+----------------------------
+Reference precursormz:                            (529.135, None)
+Reference scan:                            3944
+Query scan id:                            4084
+Score: 0.1860
+Number of matching peaks:                            5
+----------------------------
+Reference precursormz:                            (296.8821, None)
+Reference scan:                            310
+Query scan id:                            286
+Score: 0.9553
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (296.8821, None)
+Reference scan:                            350
+Query scan id:                            286
+Score: 0.9499
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (272.9588, None)
+Reference scan:                            260
+Query scan id:                            239
+Score: 0.1382
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (272.9588, None)
+Reference scan:                            296
+Query scan id:                            239
+Score: 0.1357
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (387.1143, None)
+Reference scan:                            358
+Query scan id:                            400
+Score: 0.2697
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (387.1141, None)
+Reference scan:                            415
+Query scan id:                            400
+Score: 0.2544
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (387.1142, None)
+Reference scan:                            469
+Query scan id:                            400
+Score: 0.2874
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (353.0879, None)
+Reference scan:                            1513
+Query scan id:                            1545
+Score: 0.8520
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (353.0879, None)
+Reference scan:                            1540
+Query scan id:                            1545
+Score: 0.8629
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (353.0878, None)
+Reference scan:                            1567
+Query scan id:                            1545
+Score: 0.8642
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (353.0879, None)
+Reference scan:                            1594
+Query scan id:                            1545
+Score: 0.8479
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (435.9578, None)
+Reference scan:                            606
+Query scan id:                            546
+Score: 0.2272
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (179.035, None)
+Reference scan:                            2404
+Query scan id:                            2507
+Score: 0.7095
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (179.035, None)
+Reference scan:                            2436
+Query scan id:                            2507
+Score: 0.7091
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (499.1248, None)
+Reference scan:                            3715
+Query scan id:                            3959
+Score: 0.8320
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (499.1246, None)
+Reference scan:                            3743
+Query scan id:                            3959
+Score: 0.3498
+Number of matching peaks:                            3
+----------------------------
+Reference precursormz:                            (707.1824, None)
+Reference scan:                            2046
+Query scan id:                            2068
+Score: 0.0015
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (707.1826, None)
+Reference scan:                            2078
+Query scan id:                            2068
+Score: 0.0023
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (707.1824, None)
+Reference scan:                            2113
+Query scan id:                            2068
+Score: 0.0027
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (337.0929, None)
+Reference scan:                            2625
+Query scan id:                            2744
+Score: 0.9328
+Number of matching peaks:                            5
+----------------------------
+Reference precursormz:                            (337.093, None)
+Reference scan:                            2654
+Query scan id:                            2744
+Score: 0.8360
+Number of matching peaks:                            4
+----------------------------
+Reference precursormz:                            (529.135, None)
+Reference scan:                            3944
+Query scan id:                            4220
+Score: 0.7418
+Number of matching peaks:                            6
+----------------------------
+Reference precursormz:                            (529.1349, None)
+Reference scan:                            3974
+Query scan id:                            4220
+Score: 0.4991
+Number of matching peaks:                            6
+----------------------------
+Reference precursormz:                            (529.135, None)
+Reference scan:                            4008
+Query scan id:                            4220
+Score: 0.4714
+Number of matching peaks:                            6
+----------------------------
+Reference precursormz:                            (365.1139, None)
+Reference scan:                            4003
+Query scan id:                            4242
+Score: 0.1755
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (193.0507, None)
+Reference scan:                            3157
+Query scan id:                            3334
+Score: 0.0012
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (275.1135, None)
+Reference scan:                            2626
+Query scan id:                            2756
+Score: 0.3112
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (499.1249, None)
+Reference scan:                            3670
+Query scan id:                            3919
+Score: 0.0564
+Number of matching peaks:                            2
+----------------------------
+Reference precursormz:                            (499.1248, None)
+Reference scan:                            3715
+Query scan id:                            3919
+Score: 0.1732
+Number of matching peaks:                            1
+----------------------------
+Reference precursormz:                            (499.1246, None)
+Reference scan:                            3743
+Query scan id:                            3919
+Score: 0.0737
+Number of matching peaks:                            1
+----------------------------

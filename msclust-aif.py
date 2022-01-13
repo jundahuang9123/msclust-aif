@@ -142,17 +142,18 @@ def aif_cluster(peaks_dict, sample_list, prec_dict, retention_time_tolerance,\
                 match, correlation = masspattern_match\
                     (list1, list2, correlation_threshold, \
                         correlation_threshold_confidence)
-                if match:
+                #print(type(float(abs(correlation))))
+                if match and frag_info['clusterId1'] == '':
                     precfinal.append(prec)
                     frag_info['clusterId1'] = prec_info['clusterId1']
                     frag_info['membership1'] = abs(correlation)
-                else: 
-                    #elif match and frag_info['cluster1'] != '':
-                    #    frag_info['clusterId2'] = prec_info['clusterId']
-                    #    frag_info['membership2'] = correlation
-                    #elif match and frag_info['cluster2'] != '':
-                    #    frag_info['clusterId3'] = prec_info['clusterId']
-                    #    frag_info['membership3'] = correlation
+                    #print(type(frag_info['membership1']))
+                elif match and \
+                    float(frag_info['membership1']) < float(abs(correlation)): 
+                    precfinal.append(prec)
+                    frag_info['clusterId1'] = prec_info['clusterId1']
+                    frag_info['membership1'] = abs(correlation)
+                else:
                     continue
             else:
                 continue

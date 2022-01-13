@@ -42,7 +42,8 @@ def matchms_score(q, q_spectra, ref_spectra, reference):
             if 'pepmass' in r.metadata.keys():
                 target = float(r.metadata['pepmass'][0])
                 #target = float(r.metadata['precursormz'])
-                if abs(target - tolerence) <= 0.5:
+                if abs(target - tolerence) <= 0.01:
+                #if abs(target - tolerence) <= 5 * tolerence * (10**(-6)):
                     r = normalize_intensities(default_filters(r))
                     ref_spectra.append(r)
     if ref_spectra != []:
@@ -86,25 +87,24 @@ def matchms_to_file(mgf_file, references_file, output):
             if matches != None:
                 for match in matches:
                     (reference, query, match) = match
-                    if reference is not query and match["matches"] >= 1:
-                        '''and 
-                        abs((int(reference.metadata['rtinseconds'])/60) 
-                            -(int(query.metadata['retention'])/1000000))<=0.4:'''
-                        out.write(f"Reference precursormz:\
-                            {reference.metadata['precursormz']}\n")
+                    if reference is not query and match["matches"] >= 1 and \
+                        abs((int(reference.metadata['rtinseconds'])/60) \
+                            -(int(query.metadata['retention'])/1000000))<=0.4:
                         #out.write(f"Reference precursormz:\
-                        #    {reference.metadata['pepmass']}\n")
-                        #out.write(f"Reference rettime:\
-                        #    {int(reference.metadata['rtinseconds'])/60}\n")
-                        out.write(f"Reference Name:\
-                            {reference.metadata['name']}\n")
+                        #    {reference.metadata['precursormz']}\n")
+                        out.write(f"Reference precursormz:\
+                            {reference.metadata['pepmass']}\n")
+                        out.write(f"Reference rettime:\
+                            {int(reference.metadata['rtinseconds'])/60}\n")
+                        #out.write(f"Reference Name:\
+                        #    {reference.metadata['name']}\n")
                         if 'formula' in reference.metadata.keys():
                             out.write(f"Reference Formula:\
                                 {reference.metadata['formula']}\n")
-                        #out.write(f"Query rettime:\
-                        #    {int(query.metadata['retention'])/1000000}\n")
                         out.write(f"Query rettime:\
-                            {int(query.metadata['rtinseconds'])/60}\n")
+                            {int(query.metadata['retention'])/1000000}\n")
+                        #out.write(f"Query rettime:\
+                        #    {int(query.metadata['rtinseconds'])/60}\n")
                         out.write(f"Score: {match['score']:.4f}\n")
                         out.write(f"Number of matching peaks:\
                             {match['matches']}\n")
@@ -112,10 +112,12 @@ def matchms_to_file(mgf_file, references_file, output):
                         if match['score'] >= 0.95 and match["matches"] >= 5:
                             spec_r = un_normalize(reference).plot()
                             spec_q = un_normalize(q_spectra[0]).plot()
-                            spec_r.savefig('outputlibmsms/lib{}.png'.\
-                                format(reference.metadata['precursormz']))
-                            spec_q.savefig('outputlibmsms/aif{}.png'.\
-                                format(query.metadata['pepmass'][0]))
+                            spec_r.savefig\
+                                ('msclust-aif/newspecmatch/outputlibmsms/lib{}.png'.\
+                                format(reference.metadata['pepmass'][0]))
+                            spec_q.savefig\
+                                ('msclust-aif/newspecmatch/outputlibmsms/aif{}.png'.\
+                                format(query.metadata['precursormz']))
                         '''
                         spec_r = un_normalize(reference).plot()
                         spec_q = un_normalize(q_spectra[0]).plot()

@@ -40,9 +40,7 @@ def deisotop(dic):
                     and intens1 > float(peak2.split(' ')[1]):
                     pop.append(peak2)
         pop = set(pop)
-        print(pop)
         for i in pop:
-            print(i)
             spec.remove(i)
     return dic
 

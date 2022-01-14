@@ -113,10 +113,10 @@ def matchms_to_file(mgf_file, references_file, output):
                             spec_r = un_normalize(reference).plot()
                             spec_q = un_normalize(q_spectra[0]).plot()
                             spec_r.savefig\
-                                ('msclust-aif/newspecmatch/outputlibmsms/lib{}.png'.\
+                                ('msclust-aif/newspecmatch/05012022/outputlibmsms/lib{}.png'.\
                                 format(reference.metadata['pepmass'][0]))
                             spec_q.savefig\
-                                ('msclust-aif/newspecmatch/outputlibmsms/aif{}.png'.\
+                                ('msclust-aif/newspecmatch/05012022/outputlibmsms/aif{}.png'.\
                                 format(query.metadata['precursormz']))
                         '''
                         spec_r = un_normalize(reference).plot()

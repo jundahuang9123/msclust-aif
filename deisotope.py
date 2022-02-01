@@ -4,7 +4,7 @@ Author: Junda Huang
 
 Script to reduce isotope from mgf spectra
 
-Command line input: python3 spec.mgf deiso.mgf
+Command line input: python3 spec.mgf deiso.mgf isotope_limit
 """
 
 # import statement
@@ -25,7 +25,7 @@ def parser(mgf):
 
     return specs
 
-def deisotop(dic):
+def deisotop(dic, isotope_limit):
     for key, spec in dic.items():
         peaks = []
         pop = []
@@ -36,7 +36,7 @@ def deisotop(dic):
             mz1 = float(peak1.split(' ')[0])
             intens1 = float(peak1.split(' ')[1])
             for peak2 in peaks:
-                if abs(mz1 - float(peak2.split(' ')[0])) <= 1.007 \
+                if abs(mz1 - float(peak2.split(' ')[0])) <= isotope_limit \
                     and intens1 > float(peak2.split(' ')[1]):
                     pop.append(peak2)
         pop = set(pop)
@@ -58,5 +58,5 @@ if __name__ == '__main__':
     # parsing files from command line
     originmgf = argv[1]
     newmgf = argv[2]
-    dic = deisotop(parser(originmgf))
+    dic = deisotop(parser(originmgf), argv[3])
     write_mgf(dic, newmgf)
